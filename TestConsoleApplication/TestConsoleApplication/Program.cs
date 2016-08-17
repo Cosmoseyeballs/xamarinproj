@@ -4,17 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Intro2CSharpConsoleApplication
+namespace TestConsoleApplication
 {
     class Program
     {
         static void Main(string[] args)
         {
-            
-            Console.WriteLine(  );
-            Console.ReadKey();
         }
     }
-
-
 }
