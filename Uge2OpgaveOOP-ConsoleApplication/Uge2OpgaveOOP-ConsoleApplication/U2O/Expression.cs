@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace U2O
 {
-    public abstract class Expression
+    interface IExpression {
+        double Evaluate();
+    }
+
+    public abstract class Expression:IExpression
     {
         public abstract double Evaluate();
     }
