@@ -12,13 +12,14 @@ namespace U2O
         {
 
             // Create your expression here
-            //Expression expr = new PlusExpression (new ConstantExpression(4));
+            Expression expr = new PlusExpression (new NegateExpression(new ConstantExpression(4)), 
+                new ConstantExpression(8));
             // Example:
-            Expression expr = new PlusExpression(
-                new ConstantExpression(4),
-                new PlusExpression(
-                    new ConstantExpression(1),
-                    new ConstantExpression(2)));
+            //Expression expr = new PlusExpression(
+            //    new ConstantExpression(4),
+            //    new MultiplyExpression(
+            //        new ConstantExpression(1),
+            //        new ConstantExpression(2)));    
 
             // We print the textual representation
             Console.Write(expr.ToString());

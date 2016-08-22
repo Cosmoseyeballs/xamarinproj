@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "U2O", "U2O\U2O.csproj", "{E855913B-3B6D-4CD8-AF8F-0C9FF4860EB6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "U2O.Test", "U2O.Test\U2O.Test.csproj", "{E0C942F8-269A-4884-99F8-853510927E0E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{E855913B-3B6D-4CD8-AF8F-0C9FF4860EB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E855913B-3B6D-4CD8-AF8F-0C9FF4860EB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E855913B-3B6D-4CD8-AF8F-0C9FF4860EB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0C942F8-269A-4884-99F8-853510927E0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0C942F8-269A-4884-99F8-853510927E0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0C942F8-269A-4884-99F8-853510927E0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0C942F8-269A-4884-99F8-853510927E0E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

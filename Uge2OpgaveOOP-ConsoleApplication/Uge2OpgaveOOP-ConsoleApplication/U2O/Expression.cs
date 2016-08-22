@@ -8,7 +8,7 @@ namespace U2O
 {
     public abstract class Expression
     {
-       public abstract double Evaluate();
+        public abstract double Evaluate();
     }
 
     public sealed class ConstantExpression : Expression
@@ -35,29 +35,23 @@ namespace U2O
     {
         protected Expression left { get; set; }
         protected Expression right { get; set; }
-        
+
         public abstract string OperatorSymbol { get; }
 
         public sealed override string ToString()
         {
-             
-            return String.Format("{0} {1} {2}", left, OperatorSymbol, right);
+            return String.Format("({0} {1} {2})", left, OperatorSymbol, right);
         }
     }
 
-
-
-    class PlusExpression : BinaryExpression
+    public class PlusExpression : BinaryExpression
     {
-   
-
         public PlusExpression(Expression Expression1, Expression Expression2)
         {
             left = Expression1;
             right = Expression2;
         }
 
-   
         public override double Evaluate()
         {
             return left.Evaluate() + right.Evaluate();
@@ -95,8 +89,6 @@ namespace U2O
         }
     }
 
-
-
     class MultiplyExpression : BinaryExpression
     {
         public MultiplyExpression(Expression Expression1, Expression Expression2)
@@ -118,7 +110,6 @@ namespace U2O
         }
     }
 
-
     abstract class UnaryExpression : Expression
     {
         protected Expression expr;
@@ -126,6 +117,12 @@ namespace U2O
 
     class NegateExpression : UnaryExpression
     {
+     
+        public NegateExpression(Expression v)
+        {
+            this.expr = v;
+        }
+
         public override double Evaluate()
         {
             return -expr.Evaluate();
@@ -133,7 +130,7 @@ namespace U2O
 
         public override string ToString()
         {
-            return "-"+ expr.ToString();
+            return "-" + expr.ToString();
         }
     }
 
