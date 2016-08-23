@@ -138,4 +138,12 @@ namespace U2O
         }
     }
 
+    static class ExpressionExtensions
+    {
+        public static ConstantExpression ToExpression(this double value)
+        {
+            return new ConstantExpression(value);
+        }
+    }
+
 }

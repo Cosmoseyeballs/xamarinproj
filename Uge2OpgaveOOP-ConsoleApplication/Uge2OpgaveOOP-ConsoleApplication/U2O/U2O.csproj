@@ -75,7 +75,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Animal.cs" />
     <Compile Include="Expression.cs" />
+    <Compile Include="ExpressionType.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
