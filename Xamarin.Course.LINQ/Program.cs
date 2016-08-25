@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -88,8 +89,14 @@ namespace Xamarin.Course.LINQ
 
        static async Task MainAsync()
         {
-            await Task.Delay(1000);
-            throw new Exception();
+            var stopWatch = new Stopwatch();
+            stopWatch.Start();
+            var t1 = Task.Delay(1000);
+            var t2 = Task.Delay(1500);
+            Task.WaitAny(t1, t2);
+            stopWatch.Stop();
+            Console.WriteLine(stopWatch.Elapsed);
+
         }
     }
 }
