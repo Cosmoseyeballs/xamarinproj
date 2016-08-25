@@ -101,19 +101,25 @@ namespace U2O
     }
 
 
-    static class AnimalExtensions
+    public static class AnimalExtensions
     {
         public static List<Animal> FilterOut(this List<Animal> animals, delegates.Filter filter)
         {
             var newAnimal = new List<Animal>();
             foreach (var animal in animals)
             {
-                if (!filter(animal))
+                if (filter(animal))
                 {
                     newAnimal.Add(animal);
+
                 }
             }
-            return newAnimal;
+
+            foreach (var item in newAnimal)
+            {
+                animals.Remove(item);
+            }
+            return animals;
         }
 
     }

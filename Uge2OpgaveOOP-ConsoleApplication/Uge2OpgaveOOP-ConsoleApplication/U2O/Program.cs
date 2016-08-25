@@ -49,9 +49,9 @@ namespace U2O
                 new Animal("Tudse", AnimalType.Amphibians,4,2)
             };
 
-            var aa = animals.FilterOut(a => a.Eye > 2);
+           animals.FilterOut(a => a.Type == AnimalType.Mammal && a.Name.StartsWith("H"));
 
-            foreach (var animal in aa)
+            foreach (var animal in animals)
             {
                 Console.WriteLine(animal.Name);
             }
